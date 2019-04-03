@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Polydile dile-input demo</title>
+  <style>
+  body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+  </style>
+</head>
+<body>
+  <h1>dile-input demo</h1>
+
+  <h2>Basic text field</h2>
+
+  <dile-input 
+    id="theInput"
+    placeholder="Write something..."
+    label="Text field"
+  ></dile-input>
+
+  <button id="theButton">Alert input value</button>
+
+  <hr>
+
+  <h2>Customized styles</h2>
+  <style>
+  .customized {
+    --dile-input-border-size: 3px;
+    --dile-input-focus-border-color: #3c7;
+    --dile-input-border-color: #cc7;
+  }
+  </style>
+  <dile-input 
+    class="customized"
+    placeholder="I'am customized"
+    label="Invalid text field"
+    value="This text is in value attribute"
+  ></dile-input>
+
+  <script src="../dile-input.js" type="module"></script>
+
+  <script>
+  let inputField = document.getElementById('theInput');
+  let button = document.getElementById('theButton');
+  button.addEventListener('click', (e) => {
+    if(inputField.value == '') {
+      alert ('You didn\'t wrote nothing');
+    } else {
+      alert(inputField.value);
+    }
+  })
+  inputField.addEventListener('input', (e) => {
+    console.log('input event, value: ', e.target.value);
+  })
+  inputField.addEventListener('enter-pressed', (e) => {
+    console.log('enter-pressed event, value: ', e.target.value);
+  })
+  </script>
+</body>
+</html>

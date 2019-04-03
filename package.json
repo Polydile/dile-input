@@ -1,0 +1,29 @@
+{
+  "name": "dile-input",
+  "version": "0.0.1",
+  "description": "Web Component for a customized input text field, based in LitElement.",
+  "main": "dile-input.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polydile/dile-input.git"
+  },
+  "keywords": [
+    "input",
+    "webcomponents",
+    "litelement",
+    "text",
+    "field"
+  ],
+  "author": "Miguel Angel Alvarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Polydile/dile-input/issues"
+  },
+  "homepage": "https://github.com/Polydile/dile-input#readme",
+  "dependencies": {
+    "lit-element": "^2.1.0"
+  }
+}
