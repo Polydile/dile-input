@@ -4,9 +4,31 @@ import { LitElement, html, css } from 'lit-element';
  * 
  * <dile-input></dile-input>
  * 
+ * Input text field Web Component, with customized design. Based on LitElement.
+ * 
+ * ## Styling
+ * 
+ * ```
+ * x<dile-input 
+ *   label="Text to the label"
+ *   value="Text to the input"
+ *   placeholder="Some text"
+ *   disabled
+ * ></dile-input>
+ * ```
+ *
+ * Custom property | Description | Default
+ * ----------------|-------------|---------
+ * --dile-input-label-color | Mixin applied to entire element | #59e
+ * --dile-input-border-size | Input element border size | 1px
+ * --dile-input-border-color | Input element border color | #888 
+ * --dile-input-focus-border-color | Input element border on focus | #6af
+ * --dile-input-disabled-border-color | Input element border when disabled | #eee
+ * 
  * @customElement
  * @litElement
  */
+
 class DileInput extends LitElement {
   static get properties() {
     return {
@@ -50,9 +72,6 @@ class DileInput extends LitElement {
       font-size: 1em;
       padding: 5px;
       width: 100%;
-    }
-    input.invalid {
-      border-color: var(--dile-input-invalid-color, #c33);
     }
     input:focus {
       outline: none;

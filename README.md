@@ -1,6 +1,6 @@
 # Polydile Input
 
-Text field Web Component, a customized design form input text field, based on LitElement.
+Input text field Web Component, with customized design. Based on LitElement.
 
 ```
 <dile-input label="The label" placeholder="Write something..."></dile-input>
@@ -21,7 +21,7 @@ npm install dile-input
 
 ```
 
-### Into your module script
+### ...Or into your module script
 
 ```
 import 'dile-input/dile-input';
@@ -40,7 +40,7 @@ import 'dile-input/dile-input';
 
 ## Run the project
 
-You will need to configure Webpack, or some similar tool, as usual in your frontend workflow. But, if you prefer a faster posibility, simply run the "polymer serve" command from your project folder.
+You will need to configure Webpack, or some similar tool, as usual in your frontend workflow. But, if you prefer, simply run the "polymer serve" command from your project folder.
 
 1. Install the Polymer CLI:
 
@@ -49,3 +49,13 @@ You will need to configure Webpack, or some similar tool, as usual in your front
 2. Run the development server and open a browser pointing to its URL:
 
 ```polymer serve```
+
+## Styling
+
+Custom property | Description | Default
+----------------|-------------|---------
+--dile-input-label-color | Mixin applied to entire element | #59e
+--dile-input-border-size | Input element border size | 1px
+--dile-input-border-color | Input element border color | #888 
+--dile-input-focus-border-color | Input element border on focus | #6af
+--dile-input-disabled-border-color | Input element border when disabled | #eee
