@@ -18,6 +18,7 @@
 
   <dile-input 
     id="theInput"
+    name="the_input_name"
     placeholder="Write something..."
     label="Text field"
   ></dile-input>
@@ -37,7 +38,7 @@
   <dile-input 
     class="customized"
     placeholder="I'am customized"
-    label="Invalid text field"
+    label="Customized text field"
     value="This text is in value attribute"
   ></dile-input>
 
@@ -53,12 +54,14 @@
       alert(inputField.value);
     }
   })
+  
   inputField.addEventListener('input', (e) => {
-    console.log('input event, value: ', e.target.value);
-  })
+    console.log('input event named ', e.target.name, ' has value: ', e.target.value);
+  });
+
   inputField.addEventListener('enter-pressed', (e) => {
     console.log('enter-pressed event, value: ', e.target.value);
-  })
+  });
   </script>
 </body>
 </html>

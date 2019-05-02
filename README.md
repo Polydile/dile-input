@@ -31,6 +31,7 @@ import 'dile-input/dile-input';
 
 ```
 <dile-input 
+  name="input_name"
   label="Text to the label"
   value="Text to the input"
   placeholder="Some text"
@@ -59,3 +60,25 @@ Custom property | Description | Default
 --dile-input-border-color | Input element border color | #888 
 --dile-input-focus-border-color | Input element border on focus | #6af
 --dile-input-disabled-border-color | Input element border when disabled | #eee
+
+## Events
+
+### input
+
+This element acts as an native input element. So, you can listen the native `input` event.
+
+```
+inputField.addEventListener('input', (e) => {
+  console.log('input event named ', e.target.name, ' has value: ', e.target.value);
+});
+```
+
+### enter-pressed
+
+The `enter-pressed` event is dispatched when the user press enter on it.
+
+```
+inputField.addEventListener('enter-pressed', (e) => {
+  console.log('enter-pressed event, value: ', e.target.value);
+});
+```

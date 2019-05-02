@@ -9,7 +9,7 @@ import { LitElement, html, css } from 'lit-element';
  * ## Styling
  * 
  * ```
- * x<dile-input 
+ * <dile-input 
  *   label="Text to the label"
  *   value="Text to the input"
  *   placeholder="Some text"
@@ -43,6 +43,9 @@ class DileInput extends LitElement {
 
       /** Set initial value to the input. This property syncs to the input field value property */
       value: { type: String },
+
+      /** Name for this input field */
+      name: { type: String },
     };
   }
   constructor() {
@@ -50,6 +53,8 @@ class DileInput extends LitElement {
     this.placeholder = '';
     this.label = '';
     this.value = '';
+    this.disabled = false;
+    this.name = '';
   }
   static get styles() {
     return css`
@@ -96,6 +101,7 @@ class DileInput extends LitElement {
       <input 
         type="text" 
         id="textField" 
+        name="${this.name}"
         placeholder="${this.placeholder}" 
         ?disabled="${this.disabled}" 
         @keypress="${this._lookForEnter}"
