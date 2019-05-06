@@ -24,12 +24,27 @@ import { LitElement, html, css } from 'lit-element';
  * --dile-input-border-color | Input element border color | #888 
  * --dile-input-focus-border-color | Input element border on focus | #6af
  * --dile-input-disabled-border-color | Input element border when disabled | #eee
+ * --dile-input-label-font-size | Font size for the label | 1em
+ * --dile-input-label-color | Color for the label text | #59e
  * 
  * @customElement
  * @litElement
  */
 
 class DileInput extends LitElement {
+
+  /**
+   * Fired when user press enter key.
+   *
+   * @event enter-pressed
+   */
+
+  /**
+   * Liten to the native input event to recive text input updates 
+   *
+   * @event input
+   */
+
   static get properties() {
     return {
       /** Label to the element */
@@ -68,6 +83,7 @@ class DileInput extends LitElement {
     label {
       display: block;
       margin-bottom: 4px;
+      font-size: var(--dile-input-label-font-size, 1em);
       color: var(--dile-input-label-color, #59e);
     }
     input {
@@ -110,6 +126,11 @@ class DileInput extends LitElement {
     </div>
     `;
   }
+  /**
+   * Private method to dispatch events on enter key pressed
+   *
+   * @return {!IronRequestElement}
+   */
   _lookForEnter(e) {
     let keycode = (e.keyCode ? e.keyCode : e.which);
     if (keycode == '13') {
