@@ -60,6 +60,8 @@ Custom property | Description | Default
 --dile-input-border-color | Input element border color | #888 
 --dile-input-focus-border-color | Input element border on focus | #6af
 --dile-input-disabled-border-color | Input element border when disabled | #eee
+--dile-input-label-font-size | Font size for the label | 1em
+--dile-input-label-color | Color for the label text | #59e
 
 ## Events
 
