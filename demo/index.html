@@ -16,7 +16,7 @@
 
   <h2>Basic text field</h2>
 
-  <dile-input 
+  <dile-input
     id="theInput"
     name="the_input_name"
     placeholder="Write something..."
@@ -35,9 +35,13 @@
     --dile-input-border-color: #cc7;
     --dile-input-label-color: #f99;
     --dile-input-label-font-size: 0.8em;
+    --dile-input-width: 50%;
+    --dile-input-line-height: 2.5em;
+    --dile-input-label-font-weight: bold;
+    --dile-input-font-size: 1.5em;
   }
   </style>
-  <dile-input 
+  <dile-input
     class="customized"
     placeholder="I'am customized"
     label="Customized text field"
@@ -56,7 +60,7 @@
       alert(inputField.value);
     }
   })
-  
+
   inputField.addEventListener('input', (e) => {
     console.log('input event named ', e.target.name, ' has value: ', e.target.value);
   });

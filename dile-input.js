@@ -1,15 +1,15 @@
 import { LitElement, html, css } from 'lit-element';
 /**
  * # Polydile Input
- * 
+ *
  * <dile-input></dile-input>
- * 
+ *
  * Input text field Web Component, with customized design. Based on LitElement.
- * 
+ *
  * ## Styling
- * 
+ *
  * ```
- * <dile-input 
+ * <dile-input
  *   label="Text to the label"
  *   value="Text to the input"
  *   placeholder="Some text"
@@ -19,14 +19,20 @@ import { LitElement, html, css } from 'lit-element';
  *
  * Custom property | Description | Default
  * ----------------|-------------|---------
- * --dile-input-label-color | Mixin applied to entire element | #59e
+ * --dile-input-width | Input element width | 100%
  * --dile-input-border-size | Input element border size | 1px
- * --dile-input-border-color | Input element border color | #888 
+ * --dile-input-border-color | Input element border color | #888
+ * --dile-input-border-radius | Input element border radius | 5px
  * --dile-input-focus-border-color | Input element border on focus | #6af
  * --dile-input-disabled-border-color | Input element border when disabled | #eee
+ * --dile-input-font-size | Input element font size | 1em
+ * --dile-input-line-height | Input element line height | 1.5em
  * --dile-input-label-font-size | Font size for the label | 1em
  * --dile-input-label-color | Color for the label text | #59e
- * 
+ * --dile-input-label-font-weight | Label text font weight | normal
+ * --dile-input-label-color | Mixin applied to entire element | #59e
+ *
+ --dile-input-border-
  * @customElement
  * @litElement
  */
@@ -40,7 +46,7 @@ class DileInput extends LitElement {
    */
 
   /**
-   * Liten to the native input event to recive text input updates 
+   * Liten to the native input event to recive text input updates
    *
    * @event input
    */
@@ -85,14 +91,16 @@ class DileInput extends LitElement {
       margin-bottom: 4px;
       font-size: var(--dile-input-label-font-size, 1em);
       color: var(--dile-input-label-color, #59e);
+      font-weight: var(--dile-input-label-font-weight, normal);
     }
     input {
       box-sizing: border-box;
-      border-radius: 5px;
+      border-radius: var(--dile-input-border-radius, 5px);
       border: var(--dile-input-border-size, 1px) solid var(--dile-input-border-color, #888);
-      font-size: 1em;
+      font-size: var(--dile-input-font-size, 1em);
+      line-height: var(--dile-input-line-height, 1.5em);
       padding: 5px;
-      width: 100%;
+      width: var(--dile-input-width, 100%);
     }
     input:focus {
       outline: none;
@@ -114,12 +122,12 @@ class DileInput extends LitElement {
         ? html`<label for="textField">${this.label}:</label>`
         : ''
       }
-      <input 
-        type="text" 
-        id="textField" 
+      <input
+        type="text"
+        id="textField"
         name="${this.name}"
-        placeholder="${this.placeholder}" 
-        ?disabled="${this.disabled}" 
+        placeholder="${this.placeholder}"
+        ?disabled="${this.disabled}"
         @keypress="${this._lookForEnter}"
         @input="${this._input}"
         .value="${this.value}">
@@ -140,6 +148,6 @@ class DileInput extends LitElement {
   _input(e) {
     this.value = e.target.value;
   }
-  
+
 }
 customElements.define('dile-input', DileInput);
