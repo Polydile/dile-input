@@ -14,6 +14,7 @@ import { LitElement, html, css } from 'lit-element';
  *   value="Text to the input"
  *   placeholder="Some text"
  *   disabled
+ *   errored
  * ></dile-input>
  * ```
  *
@@ -23,6 +24,7 @@ import { LitElement, html, css } from 'lit-element';
  * --dile-input-border-size | Input element border size | 1px
  * --dile-input-border-color | Input element border color | #888
  * --dile-input-border-radius | Input element border radius | 5px
+ * --dile-input-error-border-color | Input element border on errored property = true | #c00
  * --dile-input-focus-border-color | Input element border on focus | #6af
  * --dile-input-disabled-border-color | Input element border when disabled | #eee
  * --dile-input-font-size | Input element font size | 1em
@@ -31,6 +33,7 @@ import { LitElement, html, css } from 'lit-element';
  * --dile-input-label-color | Color for the label text | #59e
  * --dile-input-label-font-weight | Label text font weight | normal
  * --dile-input-label-color | Mixin applied to entire element | #59e
+ * --dile-input-error-border-color
  *
  --dile-input-border-
  * @customElement
@@ -67,6 +70,9 @@ class DileInput extends LitElement {
 
       /** Name for this input field */
       name: { type: String },
+
+      /** Name for this input field */
+      errored: { type: Boolean },
     };
   }
   constructor() {
@@ -113,6 +119,9 @@ class DileInput extends LitElement {
       background-color: #f5f5f5;
       border-color: var(--dile-input-disabled-border-color, #eee);
     }
+    .errored {
+      border-color: var(--dile-input-error-border-color, #c00);
+    }
     `;
   }
   render() {
@@ -130,14 +139,13 @@ class DileInput extends LitElement {
         ?disabled="${this.disabled}"
         @keypress="${this._lookForEnter}"
         @input="${this._input}"
-        .value="${this.value}">
+        .value="${this.value}"
+        class="${ this.errored ? 'errored' : '' }">
     </div>
     `;
   }
   /**
    * Private method to dispatch events on enter key pressed
-   *
-   * @return {!IronRequestElement}
    */
   _lookForEnter(e) {
     let keycode = (e.keyCode ? e.keyCode : e.which);
