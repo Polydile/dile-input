@@ -40,7 +40,7 @@ import { LitElement, html, css } from 'lit-element';
  * @litElement
  */
 
-class DileInput extends LitElement {
+export class DileInput extends LitElement {
 
   /**
    * Fired when user press enter key.

@@ -6,6 +6,8 @@ Input text field Web Component, with customized design. Based on LitElement.
 <dile-input label="The label" placeholder="Write something..."></dile-input>
 ```
 
+More details in [DEMO page](https://dile-input.polydile.com).
+
 # Install
 
 ```
