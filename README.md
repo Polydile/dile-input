@@ -68,7 +68,7 @@ You will need to configure Webpack, or some similar tool, as usual in your front
 Custom property | Description | Default
 ----------------|-------------|---------
 --dile-input-width | Input element width | 100%
---dile-input-border-size | Input element border size | 1px
+--dile-input-border-width | Input element border width | 1px
 --dile-input-border-color | Input element border color | #888
 --dile-input-border-radius | Input element border radius | 5px
 --dile-input-error-border-color | Input element border on errored property = true | #c00

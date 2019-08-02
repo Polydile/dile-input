@@ -21,7 +21,7 @@ import { LitElement, html, css } from 'lit-element';
  * Custom property | Description | Default
  * ----------------|-------------|---------
  * --dile-input-width | Input element width | 100%
- * --dile-input-border-size | Input element border size | 1px
+ * --dile-input-border-width | Input element border width | 1px
  * --dile-input-border-color | Input element border color | #888
  * --dile-input-border-radius | Input element border radius | 5px
  * --dile-input-error-border-color | Input element border on errored property = true | #c00
@@ -102,7 +102,7 @@ export class DileInput extends LitElement {
     input {
       box-sizing: border-box;
       border-radius: var(--dile-input-border-radius, 5px);
-      border: var(--dile-input-border-size, 1px) solid var(--dile-input-border-color, #888);
+      border: var(--dile-input-border-width, 1px) solid var(--dile-input-border-color, #888);
       font-size: var(--dile-input-font-size, 1em);
       line-height: var(--dile-input-line-height, 1.5em);
       padding: 5px;

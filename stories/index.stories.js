@@ -31,7 +31,7 @@ storiesOf('dile-input', module)
       <style>
       * {font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
       .customized {
-        --dile-input-border-size: 3px;
+        --dile-input-border-width: 3px;
         --dile-input-focus-border-color: #3c7;
         --dile-input-border-color: #cc7;
         --dile-input-border-radius: 2px;
