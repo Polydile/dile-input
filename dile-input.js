@@ -128,7 +128,7 @@ export class DileInput extends LitElement {
     return html`
     <div>
       ${this.label
-        ? html`<label for="textField">${this.label}:</label>`
+        ? html`<label for="textField">${this.label}</label>`
         : ''
       }
       <input
