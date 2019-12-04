@@ -80,6 +80,8 @@ Custom property | Description | Default
 --dile-input-label-color | Color for the label text | #59e
 --dile-input-label-font-weight | Label text font weight | normal
 --dile-input-label-color | Mixin applied to entire element | #59e
+--dile-input-background-color | Color for the background input element | #fff
+--dile-input-padding | Padding for the input text | 5px
 
 ## Events
 

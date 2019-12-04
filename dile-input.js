@@ -34,6 +34,7 @@ import { LitElement, html, css } from 'lit-element';
  * --dile-input-label-font-weight | Label text font weight | normal
  * --dile-input-label-color | Mixin applied to entire element | #59e
  * --dile-input-error-border-color
+ * --dile-input-background-color
  *
  --dile-input-border-
  * @customElement
@@ -105,8 +106,9 @@ export class DileInput extends LitElement {
       border: var(--dile-input-border-width, 1px) solid var(--dile-input-border-color, #888);
       font-size: var(--dile-input-font-size, 1em);
       line-height: var(--dile-input-line-height, 1.5em);
-      padding: 5px;
+      padding: var(--dile-input-padding, 5px);
       width: var(--dile-input-width, 100%);
+      background-color: var(--dile-input-background-color, #fff);
     }
     input:focus {
       outline: none;

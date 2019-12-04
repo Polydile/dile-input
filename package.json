@@ -1,8 +1,8 @@
 {
   "name": "dile-input",
-  "version": "2.4.2",
+  "version": "2.5.0",
   "description": "Web Component for a customized input text field, based in LitElement.",
-  "main": "dile-input.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "site:build": "npm run storybook:build",
