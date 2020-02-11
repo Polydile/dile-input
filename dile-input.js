@@ -95,7 +95,7 @@ export class DileInput extends LitElement {
     }
     label {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: var(--dile-input-label-margin-bottom, 4px);
       font-size: var(--dile-input-label-font-size, 1em);
       color: var(--dile-input-label-color, #59e);
       font-weight: var(--dile-input-label-font-weight, normal);
