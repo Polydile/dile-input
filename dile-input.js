@@ -1,3 +1,3 @@
-import {  } from './src/DileInput.js';
+import { DileInput } from './src/DileInput.js';
 
 window.customElements.define('dile-input', DileInput);
