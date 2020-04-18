@@ -1,1 +1,1 @@
-export { DileInput } from './dile-input.js';
+export { DileInput } from './src/DileInput.js';

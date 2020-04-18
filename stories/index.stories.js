@@ -1,6 +1,6 @@
 import { storiesOf, html, withKnobs, withClassPropertiesKnobs } from '@open-wc/demoing-storybook';
 
-import { DileInput } from '../dile-input.js';
+import { DileInput } from '../index.js';
 import '../dile-input.js';
 
 import readme from '../README.md';
