@@ -66,6 +66,9 @@ export class DileInput extends LitElement {
       /** Disable the input field */
       disabled: { type: Boolean },
 
+      /** Disable the autocomplete of the input field */
+      disableAutocomplete: { type: Boolean },
+
       /** Set initial value to the input. This property syncs to the input field value property */
       value: { type: String },
 
@@ -82,6 +85,7 @@ export class DileInput extends LitElement {
     this.label = '';
     this.value = '';
     this.disabled = false;
+    this.disableAutocomplete = false;
     this.name = '';
   }
   static get styles() {
@@ -139,6 +143,10 @@ export class DileInput extends LitElement {
         name="${this.name}"
         placeholder="${this.placeholder}"
         ?disabled="${this.disabled}"
+        ${this.disableAutocomplete
+          ? 'autocomplete="off"'
+          : ''
+        }
         @keypress="${this._lookForEnter}"
         @input="${this._input}"
         .value="${this.value}"
