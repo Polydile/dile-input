@@ -143,10 +143,7 @@ export class DileInput extends LitElement {
         name="${this.name}"
         placeholder="${this.placeholder}"
         ?disabled="${this.disabled}"
-        ${this.disableAutocomplete
-          ? 'autocomplete="off"'
-          : ''
-        }
+        autocomplete="${this.disableAutocomplete ? 'off' : 'on'}"
         @keypress="${this._lookForEnter}"
         @input="${this._input}"
         .value="${this.value}"
