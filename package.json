@@ -1,6 +1,6 @@
 {
   "name": "dile-input",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Web Component for a customized input text field, based in LitElement.",
   "main": "index.js",
   "scripts": {
