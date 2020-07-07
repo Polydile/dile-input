@@ -1,3 +1,7 @@
+# Moved
+
+**This package has moved** and is now available at [@dile/dile-input](https://github.com/Polydile/dile-components). Please update your dependencies. This repository is no longer maintained.
+
 # Polydile Input
 
 Input text field Web Component, with customized design. Based on LitElement.
